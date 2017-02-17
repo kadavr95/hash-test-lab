@@ -29,7 +29,11 @@ public class Main {
         System.out.println(r);
         System.out.println(run(1000));
         XYSeries s = new XYSeries("Graph 1");
-        int [] ns = {50,100,500,1000,5000};
+        int [] ns = new int[1000];
+        for (int i=0;i<1000;i++)
+        {
+            ns[i]=10*(i+1);
+        }
         for (int n:ns){
             long time=run(n);
             s.add(n,time);
